@@ -1,5 +1,6 @@
 package com.example;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -28,6 +29,7 @@ public class LionParamExceptionTest {
     @Test(expected = Exception.class)
     public void hasManeTest() throws Exception {
         Lion lion = new Lion(sex);
-        lion.doesHaveMane();
+        String expectedText = "Используйте допустимые значения пола животного - самец или самка";
+        Assert.assertEquals(expectedText, lion.doesHaveMane());
     }
 }

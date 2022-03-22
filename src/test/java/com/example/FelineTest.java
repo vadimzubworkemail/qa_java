@@ -32,7 +32,7 @@ public class FelineTest {
     }
 
     @Test
-    public void checkKittens(){
+    public void checkKittensTest(){
         Feline feline = new Feline();
         int kittensCount = 1;
         Assert.assertEquals(kittensCount, feline.getKittens());

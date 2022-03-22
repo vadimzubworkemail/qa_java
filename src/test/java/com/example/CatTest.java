@@ -17,11 +17,9 @@ public class CatTest {
     @Test
     public void checkCatFoodListTest() throws Exception {
         Cat cat = new Cat(new Feline());
-
         List<String> catFoodList = cat.getFood();
-        Assert.assertTrue(catFoodList.size() == 3);
-        Assert.assertTrue(catFoodList.contains("Животные"));
-        Assert.assertTrue(catFoodList.contains("Птицы"));
-        Assert.assertTrue(catFoodList.contains("Рыба"));
+
+        Assert.assertEquals(List.of("Животные", "Птицы", "Рыба"), catFoodList);
+
     }
 }
