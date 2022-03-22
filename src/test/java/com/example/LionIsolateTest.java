@@ -14,14 +14,13 @@ import java.util.List;
 @RunWith(MockitoJUnitRunner.class)
 public class LionIsolateTest {
     @Mock
-    Feline feline;
+    Feline mockFeline;
 
     @Test
     public void lionIsolateTest() throws Exception {
-        Lion lion = new Lion("Самка");
         int expectedKittensCount = 7;
-        Mockito.when(feline.getKittens()).thenReturn(expectedKittensCount);
-        lion.feline = feline;
+        Mockito.when(mockFeline.getKittens()).thenReturn(expectedKittensCount);
+        Lion lion = new Lion("Самка",mockFeline);
 
         Assert.assertEquals(expectedKittensCount, lion.getKittens());
     }
